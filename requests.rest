@@ -1,0 +1,72 @@
+GET http://localhost:3001/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYzNTU4ODZlODliZGJmZWMzMzM2OTdmNyIsInVzZXJuYW1lIjoiSm9obl9Tbm93IiwicGFzc3dvcmQiOiIkMmIkMTAkQ3EvazYxM25IRE16Nks0OFVXMXRCZTJXeHBFekdNNTBZcU9qSDc5clN4dG1KaDJmczlDM2EiLCJlbWFpbCI6IldvcnN0RW5kaW5nQGhiby5jb20iLCJyb2xlcyI6W10sImFjdGl2ZSI6dHJ1ZSwiYmFsYW5jZSI6MCwiX192IjowfSwiaWF0IjoxNjY2NTY5MjMzfQ.CWXDFrN6NrRlTX4ldAtJ5w0yZAAGgTXFQNTVa1GuH3g
+
+
+###
+
+POST http://localhost:3001/create
+Content-Type: application/json
+
+ {
+     "username": "Winnie_the_Pooh",
+     "email": "winnie@thepooh.com",
+     "password": "#h0neyFund"
+}
+
+###
+POST http://localhost:3001/login
+Content-Type: application/json
+
+{
+    "email": "WorstEnding@hbo.com",
+    "password": "winterIsC0ming!"
+}
+
+###
+
+PUT http://localhost:3001/balance
+
+Content-Type: application/json
+
+{
+    "email": "WorstEnding@hbo.com",
+    "balance": 102800.89
+}
+
+###
+
+DELETE http://localhost:3001/635588c789bdbfec333697fe
+
+
+
+
+        //     {
+        //         name: "John_Snow",
+        //         email: "WorstEnding@hbo.com",
+        //         password: "winterIsC0ming!",
+        //         balance: 102800.89,
+        //     },
+        //     {
+        //         name: "Spider_Man",
+        //         email: "PParker@DailyBugle.com",
+        //         password: "?!Spid3rSenseTingling",
+        //         balance: 40.32,
+        //     },
+        //     {
+        //         name: "Hulk",
+        //         email: "DBanner@TheCulverInstitute.com",
+        //         password: "SMA$H!!!111q",
+        //         balance: 80060.00,
+        //     },
+        //     {
+        //         name: "Bruce_Wayne",
+        //         email: "darkKnight@batsignal.com",
+        //         password: "1AmVeng@nce",
+        //         balance: 9999999999.99,
+        //     },
+        //     {
+        //         name: "Winnie_the_Pooh",
+        //         email: "winnie@thepooh.com",
+        //         password: "#h0neyFund",
+        //         balance: 32.76,
+        //     }
