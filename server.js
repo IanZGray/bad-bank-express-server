@@ -24,22 +24,22 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // add static path?
-app.use('/', express.static(path.join(__dirname, '/views')))
+// app.use('/', express.static(path.join(__dirname, '/views')))
 // add main route?
 
 app.use('/', require('./routes/usersRoute'));
 
-app.all('*', (req, res) => {
-    // res.status(404)
-    if (req.accepts('html')) {
-        res.sendFile(path.join(__dirname, 'views', '404.html'))
-        // console.log('404 Not Found')
-    } else if (req.accepts('json')) {
-        res.json({ message: '404 Not Found' })
-    } else {
-        res.type('txt').send('404 Not Found')
-    }
-})
+// app.all('*', (req, res) => {
+//     // res.status(404)
+//     if (req.accepts('html')) {
+//         res.sendFile(path.join(__dirname, 'views', '404.html'))
+//         // console.log('404 Not Found')
+//     } else if (req.accepts('json')) {
+//         res.json({ message: '404 Not Found' })
+//     } else {
+//         res.type('txt').send('404 Not Found')
+//     }
+// })
 
 // app.listen(PORT, () => {
 //     console.log(`express server is running on port ${PORT}`)
