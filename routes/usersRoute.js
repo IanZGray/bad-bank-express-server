@@ -30,7 +30,7 @@ router.route('/login')
     if (user == null) {
         return res.status(400).send(`User with email address ${req.body.email} does not exist.`)
     }
-// Authentication
+    // Authentication
     try {
         if (await bcrypt.compare(req.body.password, user.password)) {
             const accessToken = jwt.sign({user}, process.env.ACCESS_TOKEN_SECRET)
